@@ -35,8 +35,8 @@ def names():
     stmt = session.query(data_bar).statement
     df = pd.read_sql_query(stmt, session.bind)
     df.set_index('index', inplace=True)
-    
-    return jsonify(list(df.Year))
+    print(df.Year)
+    return jsonify(list(df.Year.values))
 
 @app.route('/otu')
 def otu():
