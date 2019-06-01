@@ -25,7 +25,7 @@ session = Session(engine)
 
 app = Flask(__name__)
 @app.route("/")
-def index():
+def home():
     return render_template("myindex.html")
 
 @app.route('/names')
